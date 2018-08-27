@@ -11,9 +11,9 @@
   <module name="FileLength"/>
 
   <!-- check that there are no tab characters in the file -->
-  <module name="FileTabCharacter">
-    <property name="eachLine" value="true"/>
-  </module>
+<!--   <module name="FileTabCharacter"> -->
+<!--     <property name="eachLine" value="true"/> -->
+<!--   </module> -->
 
   <!-- no trailing whitespace -->
   <module name="RegexpSingleline">

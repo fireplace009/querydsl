@@ -9,31 +9,48 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <groupId>com.querydsl</groupId>
   <artifactId>querydsl-sql-codegen</artifactId>
+  <version>4.2.1-NK</version>
+  
+  
   <name>Querydsl - SQL codegen support</name>
   <description>SQL codegen support for Querydsl</description>
   <packaging>jar</packaging>
 
   <properties>
     <ant.version>1.8.1</ant.version>
+    <querydsl.base.version>4.2.1</querydsl.base.version>
   </properties>
+
+
+	<distributionManagement>
+		<repository>
+			<id>maven2.it.volvo.net</id>
+			<name>copilot</name>
+			<url>http://maven2.it.volvo.net/content/repositories/co-pilot</url>
+		</repository>
+		<snapshotRepository>
+			<id>maven2.it.volvo.net</id>
+			<name>copilot</name>
+			<url>http://maven2.it.volvo.net/content/repositories/co-pilotSnapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
   <dependencies>
     <dependency>
       <groupId>com.querydsl</groupId>
       <artifactId>querydsl-codegen</artifactId>
-      <version>${project.version}</version>
+      <version>${querydsl.base.version}</version>
     </dependency>
     <dependency>
       <groupId>com.querydsl</groupId>
       <artifactId>querydsl-sql</artifactId>
-      <version>${project.version}</version>
+      <version>${querydsl.base.version}</version>
     </dependency>
     <dependency>
       <groupId>com.querydsl</groupId>
       <artifactId>querydsl-sql-spatial</artifactId>
-      <version>${project.version}</version>
+      <version>${querydsl.base.version}</version>
     </dependency>        
 
     <dependency>
@@ -58,7 +75,7 @@
     <dependency>
       <groupId>com.querydsl</groupId>
       <artifactId>querydsl-sql</artifactId>
-      <version>${project.version}</version>
+      <version>${querydsl.base.version}</version>
       <scope>test</scope>
       <type>test-jar</type>
     </dependency>           
@@ -106,12 +123,12 @@
       <version>${h2.version}</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.opengeo</groupId>
-      <artifactId>geodb</artifactId>
-      <version>0.7</version>
-      <scope>test</scope>
-    </dependency>
+<!--     <dependency> -->
+<!--       <groupId>org.opengeo</groupId> -->
+<!--       <artifactId>geodb</artifactId> -->
+<!--       <version>0.7</version> -->
+<!--       <scope>test</scope> -->
+<!--     </dependency> -->
 
     <dependency>
       <groupId>org.xerial</groupId>
@@ -123,7 +140,7 @@
     <dependency>
       <groupId>com.querydsl</groupId>
       <artifactId>querydsl-core</artifactId>
-      <version>${project.version}</version>
+      <version>${querydsl.base.version}</version>
       <scope>test</scope>
       <type>test-jar</type>
     </dependency>       
@@ -193,7 +210,7 @@
       <plugin>
         <groupId>com.querydsl</groupId>
         <artifactId>querydsl-maven-plugin</artifactId>
-        <version>${project.version}</version>
+        <version>${querydsl.base.version}</version>
         <executions>
           <execution>
             <goals>

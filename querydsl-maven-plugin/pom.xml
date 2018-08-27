@@ -9,8 +9,9 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>com.querydsl</groupId>
     <artifactId>querydsl-maven-plugin</artifactId>
+    <version>4.2.1-NK</version>
+    
     <name>Querydsl - Maven plugin</name>
     <description>Querydsl Maven plugin</description>
     <url>${project.homepage}</url>
@@ -26,7 +27,22 @@
         <mvn.version>2.2.1</mvn.version>
         <jdo.version>2.3-eb</jdo.version>
         <maven.javadoc.skip>true</maven.javadoc.skip>
+        <querydsl.base.version>4.2.1</querydsl.base.version>
     </properties>
+
+
+	<distributionManagement>
+		<repository>
+			<id>maven2.it.volvo.net</id>
+			<name>copilot</name>
+			<url>http://maven2.it.volvo.net/content/repositories/co-pilot</url>
+		</repository>
+		<snapshotRepository>
+			<id>maven2.it.volvo.net</id>
+			<name>copilot</name>
+			<url>http://maven2.it.volvo.net/content/repositories/co-pilotSnapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
     <build>
         <pluginManagement>
@@ -71,7 +87,7 @@
         <dependency>
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-sql-codegen</artifactId>
-            <version>${project.version}</version>
+            <version>4.2.1-NK</version>
         </dependency>
 
         <dependency>
@@ -104,7 +120,7 @@
         <dependency>
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-core</artifactId>
-            <version>${project.version}</version>
+            <version>${querydsl.base.version}</version>
             <scope>test</scope>
             <type>test-jar</type>
         </dependency>
